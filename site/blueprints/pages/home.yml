@@ -1,0 +1,87 @@
+title: Home
+
+icon: 🏠
+columns:
+  - width: 2/3
+    fields:
+      backgroundimg:
+        label: Homepage Background image
+        type: files
+      langviewingopt:
+        label: Language and viewing options
+        type: text
+      videostats:
+        label: Single channel video. 5m59s
+        type: text
+      vimeolink:
+        label: Vimeo Link
+        type: url
+      text:
+        label: HTML Stanza content
+        type: textarea
+        size: medium
+
+  - width: 1/3
+    fields:
+      langabbrev:
+        label: Primary Language Abbreviation
+        type: text
+      normalvideooption:
+        label: Original video (Language)
+        type: text
+      originaleurl:
+        label: Original video URL
+        type: url
+      buttonone:
+        label: Audio Described Button
+        type: text
+      buttononeurl:
+        label: Audio Described Button URL
+        type: url
+      buttontwo:
+        label: Sign Language Button
+        type: text
+      buttontwourl:
+        label: Sign Language Button URL
+        type: url
+      line-c:
+        type: line
+      langabbrevalt:
+        label: Secondary Language Abbreviation
+        type: text
+      normalvideooptionalt:
+        label: Original video (Language)
+        type: text
+      normalvideooptionlinkalt:
+        label: Original video (in Alt Language)
+        type: text
+      buttononealt:
+        label: Audio Described Button
+        type: text
+      buttononeurlalt:
+        label: Audio Described Button URL
+        type: url
+      buttontwoalt:
+        label: Sign Language Button
+        type: text
+      buttontwourlalt:
+        label: Sign Language Button URL
+        type: url
+      downloadtranscriptbutton:
+        label: Download Transcript Button
+        type: text
+      transcriptfile:
+        label: Upload Transcript File
+        type: files
+      transcripturl:
+        label: Transcript URL
+        type: url
+      loadingtitle:
+        label: Loading Title
+        type: text
+      loadingmessage:
+        label: Loading Message
+        type: textarea
+      loadinggraphicurl:
+        label: Loading Graphic
+        type: text

@@ -1,0 +1,30 @@
+title: Site
+
+columns:
+  left:
+    width: 2/3
+    sections:
+      pages:
+        type: pages
+  right:
+    width: 1/3
+    sections:
+      fields:
+        type: fields
+        headline: Custom menu
+        fields:
+          menu:
+            type: structure
+            fields:
+              firstLevel:
+                label: Main Menu Item
+                type: pages
+                max: 1
+              hasSubmenu:
+                type: toggle
+                text: Add a submenu
+              secondLevel:
+                label: Child Menu Item
+                type: pages
+                when:
+                  hasSubmenu: true
