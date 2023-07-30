@@ -9,6 +9,9 @@
             </div>
     </div>
     <div class="col-sm-3 artists">
+        <ul>
+            <li>Test Artist</li>
+</ul>
     </div>
 </div>
 <img src="https://cooperlovano.com/presents_old/img/Test.png" class="ribbon-title" alt="Presents, written in red ribbon">
