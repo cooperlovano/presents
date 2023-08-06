@@ -12,10 +12,27 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "EB Garamond";
   src: url("../fonts/EBGaramond-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Souvenir";
+  src: url("../fonts/Souvenir-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Souvenir";
+  src: url("../fonts/Souvenir-Light.ttf") format("truetype");
+  font-weight: lighter;
   font-style: normal;
   font-display: swap;
 }
@@ -26,9 +43,14 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  background: #9a0403b0;
+  background: #fffcbded;
   z-index: 3;
 }
+
+.fixed-header .title-holder a {
+  text-decoration: none !important;
+}
+
 .site-title {
   font-size: 50px;
   line-height: 40px;
@@ -37,7 +59,7 @@ body {
   color: #faf6dc;
   font-style: italic;
   padding: 0 15px;
-  background: #830004a1;
+  background: #9c0005;
   transform: scale(1, 2);
   font-family: "EB Garamond", serif;
   font-weight: 900;
@@ -47,19 +69,21 @@ body {
   letter-spacing: -3px;
   transition: font-size 0.2s ease-in-out;
 }
+
 ul {
   font-family: "EB Garamond";
   color: white;
   font-weight: normal;
 }
+
 ul.nav-list {
   position: absolute;
 }
 
 .nav-list li {
   display: inline-block;
-  background: #00000080;
-  box-shadow: 0px 0px 6px 5px #00000080;
+  background: #ffffff80;
+  box-shadow: 0px 0px 6px 5px #ffffff80;
   margin: 0 18px;
   padding: 1px 7px;
   font-size: 0.95rem;
@@ -69,13 +93,16 @@ ul.nav-list {
 .fixed-header.scrolled ul.nav-list {
   top: -8px;
 }
+
 .fixed-header ul.nav-list {
   top: 12px;
   transition: 0.2s;
 }
+
 a.nav-item-link {
-  color: white;
+  color: black;
 }
+
 .mainmenu {
   margin: 20px 0;
   position: relative;
@@ -84,20 +111,23 @@ a.nav-item-link {
 /*Language Switch*/
 nav.languages {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 0;
   text-align: right;
   width: fit-content;
   vertical-align: top;
 }
+
 nav.languages ul {
   list-style: none;
 }
+
 nav.languages li a {
-  color: white;
+  color: black;
   opacity: 0.7;
   cursor: pointer;
 }
+
 nav.languages li.active a {
   opacity: 1;
 }
@@ -109,6 +139,7 @@ nav.languages li.active a {
     height: 100vh;
   }
 }
+
 .row.main {
   margin-top: 80px;
 }
@@ -116,9 +147,74 @@ nav.languages li.active a {
 /*Background Image*/
 .ribbon-title {
   position: absolute;
-  left: 10px;
+  left: -10px;
   bottom: -8px;
-  width: 70%;
-  filter: hue-rotate(38deg) contrast(4) brightness(0.6);
+  width: 75%;
+  filter: hue-rotate(45deg) contrast(3) brightness(0.8);
   z-index: -1;
+}
+
+/*Artist List*/
+.home ul.artist-list {
+  list-style: none;
+  overflow: scroll;
+  height: 100vh;
+}
+
+ul.artist-list a {
+  color: wheat;
+}
+
+.artist-list li {
+  margin: 13px 0;
+}
+
+
+
+.col-sm-3.artists {
+  margin-top: 20px;
+}
+
+.thumb-holder {
+  width: 130px;
+  position: relative;
+  display: inline-block;
+  height: 70px;
+  overflow: hidden;
+}
+
+.artist-list p.list-name {
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+img.thumbnail {
+  width: inherit;
+}
+
+span.timestamp {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 2px 4px;
+  padding: 2px 7px;
+  background: black;
+  border-radius: 10px;
+}
+
+
+/*Individual page*/
+h2.artist-name {
+  margin: 20px 15px 5px 15px;
+  color: white;
+  font-family: 'Souvenir';
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+h3.score-title,
+.score {
+  color: wheat;
+  font-family: 'Souvenir';
 }

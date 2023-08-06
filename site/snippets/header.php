@@ -15,26 +15,26 @@
 </head>
   <body>
     <div class="row fixed-header">
-        <div class="col-sm-2">
-            <h1 class="site-title"><?= $page->title() ?></h1>
+        <div class="col-sm-2 title-holder">
+            <a href="<?= $site->url() ?>"><h1 class="site-title">Presents</h1></a>
         </div>
-        <div class="col-sm-7 mainmenu">
+        <div class="col-sm-10 mainmenu">
         <?php $menu = $site->menu()->toStructure(); ?>
-    <?php if ($menu->isNotEmpty()) : ?>
-    <ul class="nav-list">
-      <?php foreach ($menu as $item): ?>
-        <?php if ($mainMenuItem = $item->firstLevel()->toPage()) : ?>
-          <li class="nav-item"><a <?= e($mainMenuItem->isActive(), 'aria-current="page"') ?> class="nav-item-link" href="<?= $mainMenuItem->url() ?>"><?= $mainMenuItem->title() ?></a>
-          <?php endif ?>
-          <?php $subMenu = $item->secondLevel()->toPages(); ?>
-          <?php if ($subMenu->isNotEmpty()) : ?>
-            <ul class="nav-dropdown">
-              <?php foreach ($subMenu as $subItem) : ?>
-                  <li class="nav-item"><a class="nav-item-link" href="<?= $subItem->url() ?>" <?= e($subItem->isActive(), 'aria-current="page"') ?>><?= $subItem->title() ?></a></li>
-              <?php endforeach ?>
-            </ul><!-- /nav-dropdown -->
-          </li>
-          <?php endif ?>
+          <?php if ($menu->isNotEmpty()) : ?>
+          <ul class="nav-list">
+            <?php foreach ($menu as $item): ?>
+              <?php if ($mainMenuItem = $item->firstLevel()->toPage()) : ?>
+                <li class="nav-item"><a <?= e($mainMenuItem->isActive(), 'aria-current="page"') ?> class="nav-item-link" href="<?= $mainMenuItem->url() ?>"><?= $mainMenuItem->title() ?></a>
+                <?php endif ?>
+                <?php $subMenu = $item->secondLevel()->toPages(); ?>
+                <?php if ($subMenu->isNotEmpty()) : ?>
+                  <ul class="nav-dropdown">
+                    <?php foreach ($subMenu as $subItem) : ?>
+                        <li class="nav-item"><a class="nav-item-link" href="<?= $subItem->url() ?>" <?= e($subItem->isActive(), 'aria-current="page"') ?>><?= $subItem->title() ?></a></li>
+                    <?php endforeach ?>
+                  </ul><!-- /nav-dropdown -->
+                </li>
+            <?php endif ?>
           <?php endforeach ?>
     </ul><!-- /nav-list -->
     <?php endif ?>
