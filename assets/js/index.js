@@ -30,6 +30,25 @@ document.addEventListener("DOMContentLoaded", function() {
     siteTitle.style.lineHeight = newLineHeight + "px";
   }
 
+  // turn cursor into spotlight
+  function spotlightCursor () {
+    var mouseX = 0, mouseY = 0;
+    var xp = 0, yp = 0;
+    addEventListener("mousemove", (e) => {
+      mouseX = e.pageX - 75;
+      mouseY = e.pageY - 75;
+    });
+    setInterval(function(){
+      xp += ((mouseX - xp)/6);
+      yp += ((mouseY - yp)/6);
+      document.getElementById("spotlight").style.left=xp +'px';
+      document.getElementById("spotlight").style.top=yp +'px';
+    }, 20);
+  }
+
+  // run if on entrance page
+  //spotlightCursor();
+
   // Attach the scroll event listener to the window
   window.addEventListener("scroll", handleScroll);
 });

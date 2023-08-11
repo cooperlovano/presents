@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 </header>
-
+<span id="spotlight"></span>
 <div class="home row main">
     <div class="col-sm-8 home-holder">
            
