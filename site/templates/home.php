@@ -9,6 +9,8 @@
     <?php snippet('artistlist') ?>
     </div>
 </div>
+<?php snippet('ticker') ?>
+
 <img src="https://cooperlovano.com/presents_old/img/FULL.png" class="ribbon-title" alt="Presents, written in red ribbon">
 
 <?php snippet('footer') ?>

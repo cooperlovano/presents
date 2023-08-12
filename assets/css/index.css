@@ -162,10 +162,10 @@ nav.languages li.active a {
 .ribbon-title {
   position: absolute;
   left: -10px;
-  bottom: -8px;
+  bottom: 30px;
   width: 75%;
   filter: hue-rotate(45deg) contrast(3) brightness(0.8);
-  z-index: -1;
+  z-index: -2;
 }
 
 /*Artist List*/
@@ -217,6 +217,36 @@ span.timestamp {
   border-radius: 10px;
 }
 
+/*Ticker*/
+#ticker-wrapper {
+  width: 100%;
+  background: #fffcbded;
+  color: #9c0005;
+  font-family: 'Souvenir';
+  padding: 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: none;
+}
+#ticker-text {
+  animation: ticker-animation 15s linear infinite;
+  animation-play-state: running;
+  display: flex;
+  gap: 1em;
+
+}
+.ticker-paused #ticker-text{
+  animation-play-state: paused;
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 /*Individual page*/
 h2.artist-name {
@@ -231,4 +261,14 @@ h3.score-title,
 .score {
   color: wheat;
   font-family: 'Souvenir';
+}
+
+/*No motion for users with motion paused*/
+@media (prefers-reduced-motion: reduce) {
+  #ticker-text {
+    animation-play-state: paused !important;
+  }
+  #spotlight {
+    display: none;
+  }
 }

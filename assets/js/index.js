@@ -46,9 +46,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 20);
   }
 
-  // run if on entrance page
-  //spotlightCursor();
+  // TODO: run only if on entrance page
+  spotlightCursor();
 
   // Attach the scroll event listener to the window
   window.addEventListener("scroll", handleScroll);
+
+  // ticker
+  const ticker = document.getElementById("ticker-wrapper");
+  // toggle animate class on keyfame
+  ticker.addEventListener("mouseover", function() {
+    this.classList.remove("ticker-paused");
+  });
+  ticker.addEventListener("mouseout", function() {
+    this.classList.add("ticker-paused");
+  });
 });
