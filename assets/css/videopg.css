@@ -1,0 +1,55 @@
+.row.not-home {
+    margin-top: 83px;
+}
+
+.not-home .screen {
+    padding: 10px 20px;
+}
+
+/*Video Page*/
+h2.video-name {
+    color: white;
+    font-family: 'Souvenir';
+    margin: 12px 0 0 0;
+}
+
+h3.artist-name {
+    font-family: 'Souvenir';
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/*Score Loader*/
+#score {
+    background-color: #8b0100;
+    color: white;
+    position: fixed;
+    top: 0;
+    padding: 140px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    font-family: 'Souvenir';
+}
+
+p.loading-score-title {
+    font-size: 1.4rem;
+}
+
+.loading-score-title span.name {
+    text-decoration: underline;
+}
+
+button.hide-score {
+    z-index: 9999;
+    background: red;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    display: block;
+    margin: auto;
+    bottom: 100px;
+    width: fit-content;
+}

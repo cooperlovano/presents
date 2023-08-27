@@ -10,23 +10,11 @@
 <?= css([
     'assets/css/bootstrap.min.css',
     'assets/css/index.css',
-    'assets/css/videopg.css',
     'assets/css/footer.css'
   ]) ?>
 
 </head>
   <body>
-
-
-
-<!-- Fullscreen score div -->
-<div id="score">
-  <p class="loading-score-title">Score for <span class="name"><?= $page->vidtitle() ?></span> by <span class=""><?= $page->title() ?></span></p>
-  <p class="loading-score"><?= $page->scoretext() ?></p>
-   <!-- Button to hide the score -->
- <button class="hide-score">Hide Score</button>
-</div>
-
     <div class="row fixed-header">
         <div class="col-sm-2 title-holder">
             <a href="<?= $site->url() ?>"><h1 class="site-title">Presents</h1></a>

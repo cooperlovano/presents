@@ -1,16 +1,10 @@
-<?php snippet('header') ?>
+<?php snippet('homeheader') ?>
 </header>
 <span id="spotlight"></span>
-<div class="home row main">
-    <div class="col-sm-8 home-holder">
-           
-    </div>
-    <div class="col-sm-4 artists">
-    <?php snippet('artistlist') ?>
-    </div>
+<div class="home main">
+    <?php snippet('artistgrid') ?>
 </div>
+
+  
 <?php snippet('ticker') ?>
-
-<img src="https://cooperlovano.com/presents_old/img/FULL.png" class="ribbon-title" alt="Presents, written in red ribbon">
-
-<?php snippet('footer') ?>
+<?php snippet('homefooter') ?>

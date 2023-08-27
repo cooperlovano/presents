@@ -4,6 +4,9 @@ icon: 🎥
 columns:
   - width: 2/3
     fields:
+      vidtitle:
+        label: Video title
+        type: text
       scoretext:
         label: Score
         type: textarea

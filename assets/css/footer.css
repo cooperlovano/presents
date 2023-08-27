@@ -1,0 +1,14 @@
+.footer {
+    background: #8b0100;
+    padding: 10px 20px;
+    margin-top: 85px;
+    padding-bottom: 100px;
+}
+
+.footer ul.nav-list {
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}

@@ -1,3 +1,6 @@
+<img src="https://cooperlovano.com/presents_old/img/Lg-bow.png" class="desk lg-bow start" alt="Bow wiggly and made of red ribbon">
+<img src="https://cooperlovano.com/presents_old/img/mobile-top.png" class="mobile lg-bow start" alt="Bow wiggly and made of red ribbon">
+
 <div class="footer">
 <img src="https://cooperlovano.com/presents_old/img/FULL.png" class="ribbon-title" alt="Presents, written in red ribbon">
 <?php $menu = $site->menu()->toStructure(); ?>
@@ -22,7 +25,7 @@
 </div>
   <?= js([
 'assets/js/index.js', 
-'assets/js/loader.js'
+'assets/js/home.js'
   ]) ?>
 
 </body>
