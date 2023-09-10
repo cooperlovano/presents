@@ -76,6 +76,10 @@ ul {
   font-size: .8rem;
 }
 
+#hamburger {
+  opacity: 0;
+}
+
 ul.nav-list {
   position: absolute;
 }
@@ -89,14 +93,72 @@ ul.nav-list {
 }
 
 /*Nav Scrolled effect*/
-.fixed-header.scrolled ul.nav-list {
+.scrolled #hamburger {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: -15px;
+  right: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger .line{
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.open #hamburger .line:nth-child(2){
+  opacity: 0;
+}
+
+.open #hamburger .line:nth-child(1){
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+
+.open #hamburger .line:nth-child(3){
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.scrolled .nav-list {
+  opacity: 0;
   top: -8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.scrolled .open .nav-list {
+  display: block;
+  opacity: 1;
+  top: 24px;
+  background: #d09c19ed;
+  padding: 5px;
+  border: 1px solid white;
+  border-top: 0;
+}
+.scrolled .open .nav-item {
+  margin: 15px;
 }
 
 .fixed-header ul.nav-list {
   right: 100px;
   top: 12px;
   transition: 0.2s;
+}
+
+.scrolled .nav-item {
+  display: block;
 }
 
 a.nav-item-link {

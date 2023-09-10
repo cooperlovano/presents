@@ -31,7 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
     siteTitle.style.lineHeight = newLineHeight + "px";
   }
 
+  const hamburger = document.getElementById("hamburger")
+  hamburger.addEventListener("click", toggleMenu);
 
+  function toggleMenu() {
+    const menu = document.getElementById("mainmenu");
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+    } else {
+      menu.classList.add("open");
+      console.log("working")
+    }
+  }
 
   // Attach the scroll event listener to the window
   window.addEventListener("scroll", handleScroll);

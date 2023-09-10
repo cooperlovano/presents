@@ -31,7 +31,12 @@
         <div class="col-sm-2 title-holder">
             <a href="<?= $site->url() ?>"><h1 class="site-title">Presents</h1></a>
         </div>
-        <div class="col-sm-10 mainmenu">
+        <div class="col-sm-10 mainmenu" id="mainmenu">
+        <div id="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
         <?php $menu = $site->menu()->toStructure(); ?>
           <?php if ($menu->isNotEmpty()) : ?>
           <ul class="nav-list">
